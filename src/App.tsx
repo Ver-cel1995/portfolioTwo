@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Header } from "./layout/header/Header";
+import styled from "styled-components";
+import { Flexwrapper } from "./components/Flexwrapper";
+import { SidebarLeft } from "./layout/leftAside/SidebarLeft";
+import { SideBatRight } from "./layout/rigthAside/SideBatRight";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Flexwrapper gap="30px" justify={"center"}>
+        <SidebarLeft/>
+          <Header />
+        <SideBatRight/>
+      </Flexwrapper>
+      
     </div>
   );
 }
 
 export default App;
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 305px 970px 108px;
+  gap: 30px;
+  font-weight: 800;
+  font-size: 12px;
+  text-align: center;
+`;
