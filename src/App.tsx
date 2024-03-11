@@ -4,16 +4,24 @@ import styled from "styled-components";
 import { Flexwrapper } from "./components/Flexwrapper";
 import { SidebarLeft } from "./layout/leftAside/SidebarLeft";
 import { SideBatRight } from "./layout/rigthAside/SideBatRight";
+import { MyServices } from "./layout/section/services/MyServices";
+import { Price } from "./layout/section/price/Price";
+import { Recommendations } from "./layout/section/recommendations/Recommendations";
+import { Education } from "./layout/section/education/Education";
 
 function App() {
   return (
     <div>
-      <Flexwrapper gap="30px" justify={"center"}>
+      {/* <Flexwrapper gap="30px" justify={"center"}>
         <SidebarLeft/>
           <Header />
         <SideBatRight/>
-      </Flexwrapper>
-      
+      </Flexwrapper> */}
+      <Header />
+      <MyServices />
+      <Price />
+      <Recommendations/>
+      <Education/>
     </div>
   );
 }

@@ -13,7 +13,21 @@ export const GlobalStyled = createGlobalStyle`
         font-size: 48px;
     }
 
+    ul {
+        list-style: none;
+    }
+
+    button {
+        background-color: unset;
+        border: none;
+        cursor: pointer;
+    }
+
     body {
         background-color: #F0F0F6;
+    }
+
+    section {
+        padding: 70px 0; 
     }
 `
