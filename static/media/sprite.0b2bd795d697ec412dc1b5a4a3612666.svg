@@ -22,6 +22,14 @@
 		<path d="M13.5 0C2.25 0 0.75 10.5 0 15L1.4985 15C1.998 12.5005 3.24825 11.1255 5.25 10.875C8.25 10.5 10.5 7.875 11.25 5.625L10.125 4.875L10.875 4.125C11.625 3.375 12.378 2.25 13.5 0Z" fill="#FFB400" fill-opacity="1.000000" fill-rule="nonzero"/>
 	</g>
 
+	<g id="check">
+		<path id="Vector" d="M6 9.17L15.19 -0.03L16.6 1.39L6 12L-0.37 5.63L1.04 4.22L6 9.17Z" fill="#1B1B1B" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+
+	<g id="close">
+		<path id="Vector" d="M6 4.58L10.95 -0.37L12.36 1.05L7.41 6L12.36 10.95L10.95 12.36L6 7.41L1.04 12.36L-0.37 10.95L4.58 6L-0.37 1.05L1.04 -0.37L6 4.58Z" fill="#1B1B1B" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+
 	<g id="gameDeveloper">
 		<g clip-path="url(#clip1_1507)">
 		<path id="Vector" d="M32.375 38.1562L41.625 38.1562L41.625 40.4688L32.375 40.4688L32.375 38.1562Z" fill="#FFB400" fill-opacity="1.000000" fill-rule="nonzero"/>
