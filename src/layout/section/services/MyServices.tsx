@@ -14,34 +14,34 @@ export const MyServices = () => {
             "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum"
           }
         />
-        <Flexwrapper wrap="wrap" justify="space-between" gap="20px">
+        <Flexwrapper wrap="wrap" justify="center" gap="20px">
           <Services
-            iconId={"coding"}
+            iconId={"coding"} width="65px" height="53px" viewbox="0 0 65 53"
             title={"Web Development"}
             text={"blog, e-commerce"}
           />
           <Services
-            iconId={"UI/UX"}
+            iconId={"UI/UX"} width="68px" height="67px" viewbox="0 0 68 67"
             title={"Web Development"}
             text={"Mobile app, website design"}
           />
           <Services
-            iconId={"microphone"}
+            iconId={"microphone"} width="74px" height="74px" viewbox="0 0 74 74"
             title={"Web Development"}
             text={"Voice Over, Beat Making"}
           />
           <Services
-            iconId={"gameDeveloper"}
+            iconId={"gameDeveloper"} 
             title={"Web Development"}
             text={"Character Design, Props & Objects"}
           />
           <Services
-            iconId={"photographer"}
+            iconId={"photographer"} 
             title={"Web Development"}
             text={"portrait, product photography"}
           />
           <Services
-            iconId={"popUp"}
+            iconId={"popUp"} 
             title={"Web Development"}
             text={"sale of services, broadcast, distribution"}
           />

@@ -1,21 +1,21 @@
 import styled from "styled-components";
 import { WrapSectionTittle } from "../../../components/WrapSectionTittle";
-import { Educations } from "./educations/Educations";
 import { Container } from "../../../components/Container";
+import {  History } from "./History";
 
-export const Education = () => {
+export const WorkHistory = () => {
     return (
-        <StyledEducation>
+        <StyledWorkHistory>
             <Container>
-                <WrapSectionTittle title="Education" 
+                <WrapSectionTittle title="Work History" 
                                 text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum" />
 
-                <Educations/>
+                <History/>
             </Container>
-        </StyledEducation>
+        </StyledWorkHistory>
     );
 };
 
-const StyledEducation = styled.section`
+const StyledWorkHistory = styled.section`
 
 `

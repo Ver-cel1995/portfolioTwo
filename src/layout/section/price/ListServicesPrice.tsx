@@ -1,28 +1,35 @@
 import { styled } from 'styled-components';
-import { Icon } from '../../../components/Icon';
-
-export type PriceValueType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 
 type ListServicesPropsType = {
     itemPrice?: string,
+    icon?: React.ReactNode,
 }
 
-export const ListServicesPrice = (props: ListServicesPropsType) => {
+export const ItemsServicesPrice = (props: ListServicesPropsType) => {
     return (
         <ListServices>
                 <ItemListServices>
-                <Icon iconId={"map"} width='15px' height='15px' viewbox='0 0 15 15'/>
-                    {props.itemPrice}
+                    <div>
+                        {props.icon}
+                        {props.itemPrice}
+                    </div>
                 </ItemListServices> 
         </ListServices>
     );
 };
 
 const ListServices = styled.ul`
-    margin-top: 21px;
+    margin-top: 21px;    
 `
 
 const ItemListServices = styled.li`
     margin-bottom: 16px;
     text-align: start;
+
+    & > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 `
+

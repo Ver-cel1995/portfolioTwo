@@ -9,8 +9,22 @@ export const GlobalStyled = createGlobalStyle`
         margin: 0;
     }
 
+    a {
+        cursor: pointer;
+    }
+
     h1 {
         font-size: 48px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
     }
 
     ul {
@@ -25,6 +39,7 @@ export const GlobalStyled = createGlobalStyle`
 
     body {
         background-color: #F0F0F6;
+        font-family: 'Inter', sans-serif;
     }
 
     section {

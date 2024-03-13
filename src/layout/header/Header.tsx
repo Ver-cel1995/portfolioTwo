@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Icon } from "../../components/Icon";
-import photo from "../../assets/img/I'm.png";
+import photo from "../../assets/img/headerPhoto.png";
 import photoSvg from "../../assets/vectorImg/headerAbstract.svg";
 import { Flexwrapper } from "../../components/Flexwrapper";
 import { Container } from "../../components/Container";
 import { SectionTittle } from "../../components/WrapSectionTittle";
+import { theme } from "../../styles/Theme";
 
 export const Header = () => {
   return (
@@ -12,7 +13,7 @@ export const Header = () => {
       <Container>
         <Flexwrapper justify={"space-between"} align={"center"}>
           <MainTitle>
-            I’m Russian idiot and <span> Front-end</span> Developer
+            I’m madman and <span> Front-end</span> Developer
           </MainTitle>
 
           <Photo src={photo} />
@@ -23,7 +24,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: #fff;
+  background-color: ${theme.colors.white};
 
   ${Flexwrapper} {
     position: relative;
@@ -44,7 +45,7 @@ const MainTitle = styled.h1`
   max-width: 490px;
 
   span {
-    color: #ffb400;
+    color: ${theme.colors.yellow};
   }
 `;
 

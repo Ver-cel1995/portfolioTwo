@@ -8,13 +8,27 @@ import { MyServices } from "./layout/section/services/MyServices";
 import { Price } from "./layout/section/price/Price";
 import { Recommendations } from "./layout/section/recommendations/Recommendations";
 import { Education } from "./layout/section/education/Education";
+import { WorkHistory } from "./layout/section/workHistory/WorkHistory";
+import { Portfolio } from "./layout/section/portfolio/Portfolio";
+import { Blog } from "./layout/section/blog/Blog";
+import { Contact } from "./layout/section/Contact/Contact";
+import { Footer } from "./layout/footer/Footer";
 
 function App() {
   return (
     <div>
-      {/* <Flexwrapper gap="30px" justify={"center"}>
+      {/* <Flexwrapper gap="30px" justify={"space-between"}>
         <SidebarLeft/>
+        <Main>
           <Header />
+          <MyServices />
+          <Price />
+          <Recommendations/>
+          <Education/>
+          <WorkHistory/>
+          <Portfolio/>
+          <Blog/>
+        </Main>
         <SideBatRight/>
       </Flexwrapper> */}
       <Header />
@@ -22,6 +36,11 @@ function App() {
       <Price />
       <Recommendations/>
       <Education/>
+      <WorkHistory/>
+      <Portfolio/>
+      <Blog/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
