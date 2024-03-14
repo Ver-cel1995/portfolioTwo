@@ -37,7 +37,7 @@ export const WrapInfo = (props: WrapInfoPropsType) => {
 const StyledWrapInfo = styled.div`
   background-color: ${theme.colors.white};
   min-width: 370px;
-  padding: 0 25px 15px;
+  padding: 0 25px 14px;
   color: ${theme.colors.grey};
 `;
 const WrapIcon = styled.a`

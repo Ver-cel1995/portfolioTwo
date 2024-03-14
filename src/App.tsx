@@ -3,7 +3,7 @@ import { Header } from "./layout/header/Header";
 import styled from "styled-components";
 import { Flexwrapper } from "./components/Flexwrapper";
 import { SidebarLeft } from "./layout/leftAside/SidebarLeft";
-import { SideBatRight } from "./layout/rigthAside/SideBatRight";
+import { Sidebar } from "./layout/rigthAside/SideBatRight";
 import { MyServices } from "./layout/section/services/MyServices";
 import { Price } from "./layout/section/price/Price";
 import { Recommendations } from "./layout/section/recommendations/Recommendations";
@@ -31,27 +31,32 @@ function App() {
         </Main>
         <SideBatRight/>
       </Flexwrapper> */}
-      <Header />
-      <MyServices />
-      <Price />
-      <Recommendations/>
-      <Education/>
-      <WorkHistory/>
-      <Portfolio/>
-      <Blog/>
-      <Contact/>
-      <Footer/>
+      <MainContainer>
+        <Flexwrapper gap="30px">
+        <Sidebar/>
+          <Main>
+            <Header />
+            <MyServices />
+            <Price />
+            <Recommendations />
+            <Education />
+            <WorkHistory />
+            <Portfolio />
+            <Blog />
+            <Contact />
+            <Footer />
+          </Main>
+        </Flexwrapper>
+      </MainContainer>
     </div>
   );
 }
 
 export default App;
 
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: 305px 970px 108px;
-  gap: 30px;
-  font-weight: 800;
-  font-size: 12px;
-  text-align: center;
+const MainContainer = styled.div`
+  max-width: 1100px;
+  margin: 0 auto;
 `;
+const Main = styled.div``;
+

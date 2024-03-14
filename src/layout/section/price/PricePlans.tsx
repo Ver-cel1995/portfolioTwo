@@ -25,7 +25,7 @@ export const PricePlans = (props: PricePlansPropsType) => {
         <ValueText>{props.text}</ValueText>
       </Value>
       {props.items.map((i) => {
-        return <ItemsServicesPrice itemPrice={i.text} icon={i.icon} />;
+        return <ItemsServicesPrice itemPrice={i.text} icon={i.icon} color={i.color}/>;
       })}
       <Button text="order now" />
     </StyledPricePlans>
@@ -90,5 +90,5 @@ const ValuePrice = styled.h2`
 `;
 
 const ValueText = styled.p`
-  color: ${theme.colors.grey};
+
 `;

@@ -3,6 +3,7 @@ import { styled } from 'styled-components';
 type ListServicesPropsType = {
     itemPrice?: string,
     icon?: React.ReactNode,
+    color: string
 }
 
 export const ItemsServicesPrice = (props: ListServicesPropsType) => {
@@ -25,6 +26,7 @@ const ListServices = styled.ul`
 const ItemListServices = styled.li`
     margin-bottom: 16px;
     text-align: start;
+
 
     & > div {
         display: flex;

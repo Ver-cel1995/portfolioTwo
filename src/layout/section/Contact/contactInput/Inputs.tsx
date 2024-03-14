@@ -31,7 +31,7 @@ const StyledInputs = styled.input`
     max-width: 521px;
     width: 100%;
     border: 1px;
-    padding: 10px;
+    padding: 18px;
 
     &:focus-visible {
         outline: 1px solid ${theme.colors.yellow};

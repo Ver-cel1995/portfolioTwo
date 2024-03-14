@@ -3,6 +3,7 @@ import { Icon } from "../Icon";
 export const goldItems = [
     {
       text: "UI Design",
+      color: "#red",
       icon: (
         <Icon iconId="check" width="15px" height="15px" viewbox="0 0 20 20" />
       ),

@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { PhotoItems } from "../../portfolio/portfolios/PhotoItems";
+import StyledPhotoItems, { PhotoItems } from "../../portfolio/portfolios/PhotoItems";
 import { theme } from "../../../../styles/Theme";
 import vector from "../../../../assets/vectorImg/vector.svg";
+import { link } from "fs";
 
 type WrapBlogPropsType = {
   photo?: string;
@@ -13,7 +14,7 @@ type WrapBlogPropsType = {
 export const WrapBlog = (props: WrapBlogPropsType) => {
   return (
     <StyledWrapBlog>
-      <PhotoItems srcPhoto={props.photo} />
+      <PhotoItems srcPhoto={props.photo}/>
       <WrapDescription>
         <TitleBlog>{props.title}</TitleBlog>
         <TextBlog>{props.text}</TextBlog>
@@ -23,9 +24,19 @@ export const WrapBlog = (props: WrapBlogPropsType) => {
   );
 };
 
+
 const StyledWrapBlog = styled.div`
   background-color: ${theme.colors.white};
   width: 310px;
+
+  ${StyledPhotoItems}:hover {
+    box-shadow: none;
+    cursor: default;
+  }
+
+  &:hover ${StyledPhotoItems} {
+    box-shadow: ${theme.shadow.primary}
+}
 `;
 const WrapDescription = styled.div`
   padding: 25px 36px 18px 25px;
@@ -41,7 +52,7 @@ const LinkBlog = styled.a`
   font-weight: 500;
   position: relative;
 
-&::after {
+  &::after {
     content: "";
     width: 5px;
     height: 7px;
@@ -52,11 +63,9 @@ const LinkBlog = styled.a`
     transform: translateX(-100%);
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
-
-}
- &:hover::after {
-    transform: translateX(0); 
+  }
+  &:hover::after {
+    transform: translateX(0);
     opacity: 1;
- }
-
+  }
 `;

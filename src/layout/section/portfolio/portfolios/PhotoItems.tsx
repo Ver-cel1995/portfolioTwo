@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
 
 type PhotoItemsPropsType = {
-    srcPhoto?: string
+    srcPhoto?: string,
+    isMostPopular?: boolean;
 }
 
 export const PhotoItems = (props: PhotoItemsPropsType) => {
@@ -10,6 +11,7 @@ export const PhotoItems = (props: PhotoItemsPropsType) => {
         <StyledPhotoItems src={props.srcPhoto}/>
     );
 };
+
 
 const StyledPhotoItems = styled.img`
     object-fit: cover;
@@ -22,3 +24,5 @@ const StyledPhotoItems = styled.img`
         box-shadow: ${theme.shadow.primary}
     }
 `
+
+export default StyledPhotoItems;
