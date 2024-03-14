@@ -26,7 +26,6 @@ export const Header = () => {
 const StyledHeader = styled.header`
   background-color: ${theme.colors.white};
 
-  ${Flexwrapper} {
     position: relative;
 
     &::before {
@@ -36,8 +35,9 @@ const StyledHeader = styled.header`
       background-repeat: no-repeat;
       background-position: center;
       position: absolute;
+      width: 100%;
+      height: 100%;
     }
-  }
 `;
 
 const MainTitle = styled.h1`

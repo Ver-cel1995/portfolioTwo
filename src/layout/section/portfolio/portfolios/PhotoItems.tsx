@@ -8,12 +8,32 @@ type PhotoItemsPropsType = {
 
 export const PhotoItems = (props: PhotoItemsPropsType) => {
     return (
-        <StyledPhotoItems src={props.srcPhoto}/>
+        <WrapImg>
+            <StyledPhotoItems src={props.srcPhoto}/>
+        </WrapImg>
     );
 };
 
+export const WrapImg = styled.div`
+    position: relative;
 
-const StyledPhotoItems = styled.img`
+    &::before {
+        content: "";
+        width: 310px;
+        height: 300px;
+        background-color: ${theme.colors.yellow};
+        position: absolute;
+        transition: all 1s ease;
+    }
+
+    &:hover::before {
+        width: 0;
+        }
+
+
+`
+
+export const StyledPhotoItems = styled.img`
     object-fit: cover;
     width: 310px;
     height: 300px;
@@ -24,5 +44,3 @@ const StyledPhotoItems = styled.img`
         box-shadow: ${theme.shadow.primary}
     }
 `
-
-export default StyledPhotoItems;

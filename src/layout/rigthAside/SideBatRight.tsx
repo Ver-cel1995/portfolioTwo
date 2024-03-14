@@ -31,14 +31,20 @@ const StyledSidebar = styled.div`
   max-width: 108px;
   padding: 52px 34px;
   background-color: #fafafa;
-  max-height: 800px;
+  max-height: 650px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 15px;
+  transition: box-shadow 1s;
 
-  position: fixed;
-  right: 40px;
+  position: sticky;
+  right: 0;
+  top: 0;
+
+  &:hover {
+    box-shadow: ${theme.shadow.primary};
+  }
 `;
 
 const WrapIcon = styled.a`

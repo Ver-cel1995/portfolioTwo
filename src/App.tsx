@@ -1,4 +1,4 @@
-import React from "react";
+import './App.css';
 import { Header } from "./layout/header/Header";
 import styled from "styled-components";
 import { Flexwrapper } from "./components/Flexwrapper";
@@ -16,36 +16,22 @@ import { Footer } from "./layout/footer/Footer";
 
 function App() {
   return (
-    <div>
-      {/* <Flexwrapper gap="30px" justify={"space-between"}>
-        <SidebarLeft/>
-        <Main>
-          <Header />
-          <MyServices />
-          <Price />
-          <Recommendations/>
-          <Education/>
-          <WorkHistory/>
-          <Portfolio/>
-          <Blog/>
-        </Main>
-        <SideBatRight/>
-      </Flexwrapper> */}
+    <div className="App">
       <MainContainer>
         <Flexwrapper gap="30px">
-        <Sidebar/>
-          <Main>
-            <Header />
-            <MyServices />
-            <Price />
-            <Recommendations />
-            <Education />
-            <WorkHistory />
-            <Portfolio />
-            <Blog />
-            <Contact />
-            <Footer />
-          </Main>
+            <Main>
+              <Header />
+              <MyServices />
+              <Price />
+              <Recommendations />
+              <Education />
+              <WorkHistory />
+              <Portfolio />
+              <Blog />
+              <Contact />
+              <Footer />
+            </Main>    
+            <Sidebar/>    
         </Flexwrapper>
       </MainContainer>
     </div>

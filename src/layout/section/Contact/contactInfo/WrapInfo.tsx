@@ -9,15 +9,13 @@ type WrapInfoPropsType = {
   local: string;
   cities: string;
   outdoors: string;
-  icon?: React.ReactNode
+  icon?: React.ReactNode;
 };
 
 export const WrapInfo = (props: WrapInfoPropsType) => {
   return (
     <StyledWrapInfo>
-      <WrapIcon>
-        {props.icon}
-      </WrapIcon>
+      <WrapIcon>{props.icon}</WrapIcon>
       <WrapperContacrt>
         <Country>{props.country}</Country>
         <CountryText>{props.local}</CountryText>
@@ -66,7 +64,17 @@ const WrapperContacrt = styled.div`
 `;
 const Country = styled.p`
   font-weight: bold;
+
+  &::selection {
+    color: white;
+    background-color: ${theme.colors.yellow};
+  }
 `;
 const CountryText = styled.p`
   font-weight: 400;
+
+  &::selection {
+    color: white;
+    background-color: ${theme.colors.yellow};
+  }
 `;

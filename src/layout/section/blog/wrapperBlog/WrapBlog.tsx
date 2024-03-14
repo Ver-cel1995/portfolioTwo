@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import StyledPhotoItems, { PhotoItems } from "../../portfolio/portfolios/PhotoItems";
+import {
+  PhotoItems,
+  StyledPhotoItems,
+  WrapImg,
+} from "../../portfolio/portfolios/PhotoItems";
 import { theme } from "../../../../styles/Theme";
 import vector from "../../../../assets/vectorImg/vector.svg";
 import { link } from "fs";
@@ -14,7 +18,7 @@ type WrapBlogPropsType = {
 export const WrapBlog = (props: WrapBlogPropsType) => {
   return (
     <StyledWrapBlog>
-      <PhotoItems srcPhoto={props.photo}/>
+      <PhotoItems srcPhoto={props.photo} />
       <WrapDescription>
         <TitleBlog>{props.title}</TitleBlog>
         <TextBlog>{props.text}</TextBlog>
@@ -23,7 +27,6 @@ export const WrapBlog = (props: WrapBlogPropsType) => {
     </StyledWrapBlog>
   );
 };
-
 
 const StyledWrapBlog = styled.div`
   background-color: ${theme.colors.white};
@@ -35,8 +38,19 @@ const StyledWrapBlog = styled.div`
   }
 
   &:hover ${StyledPhotoItems} {
-    box-shadow: ${theme.shadow.primary}
-}
+    box-shadow: ${theme.shadow.primary};
+  }
+
+  
+
+  ${WrapImg}::before {
+    opacity: 0.9;
+  }
+
+  &:hover ${WrapImg}::before {
+    height: 0px;
+    width: 0;
+  }
 `;
 const WrapDescription = styled.div`
   padding: 25px 36px 18px 25px;

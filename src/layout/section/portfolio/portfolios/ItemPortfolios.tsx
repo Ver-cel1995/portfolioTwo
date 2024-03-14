@@ -17,8 +17,10 @@ const StyledItemPortfolios = styled.li`
     
 `
 const StyledItemsPortfolios = styled.a`
+
     &:hover {
         transition: all 0.5s ease-in-out;
         color: ${theme.colors.yellow};
+        width: 500px;
     }
 `
