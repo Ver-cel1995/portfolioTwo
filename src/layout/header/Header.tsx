@@ -4,19 +4,38 @@ import photo from "../../assets/img/headerPhoto.png";
 import photoSvg from "../../assets/vectorImg/headerAbstract.svg";
 import { Flexwrapper } from "../../components/Flexwrapper";
 import { Container } from "../../components/Container";
-import { SectionTittle } from "../../components/WrapSectionTittle";
 import { theme } from "../../styles/Theme";
+import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Header = () => {
   return (
     <StyledHeader>
+        <Tilt
+            className="tilt-img"
+            tiltMaxAngleX={35}
+            tiltMaxAngleY={25}
+            perspective={3000}
+            scale={1}
+            transitionSpeed={5000}
+        >
+          <WrapImg src={photoSvg}/>
+        </Tilt>
       <Container>
-        <Flexwrapper justify={"space-between"} align={"center"}>
+        <Flexwrapper justify={"space-around"} align={"center"}>
           <MainTitle>
-            I’m madman and <span> Front-end</span> Developer
+            <h4>I'm Aleksei and</h4>
+          <Typewriter
+            options={{
+              strings: [`<p>Front-end</p>` + " " + "Developer"],
+              autoStart: true,
+              loop: true,
+              skipAddStyles: true,
+              delay: 70
+            }}
+          />
           </MainTitle>
-
-          <Photo src={photo} />
+            <Photo src={photo} />
         </Flexwrapper>
       </Container>
     </StyledHeader>
@@ -25,26 +44,23 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   background-color: ${theme.colors.white};
-
-    position: relative;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      background-image: url(${photoSvg});
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
+  position: relative;
 `;
+
+const WrapImg = styled.img`
+  position: absolute;
+
+  right: 80px;
+  bottom: -450px;
+
+`
 
 const MainTitle = styled.h1`
   font-size: 48px;
-  max-width: 490px;
+  width: 515px;
 
-  span {
+  p {
+    display: inline;
     color: ${theme.colors.yellow};
   }
 `;

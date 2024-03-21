@@ -24,9 +24,17 @@ export const PricePlans = (props: PricePlansPropsType) => {
         </ValuePrice>
         <ValueText>{props.text}</ValueText>
       </Value>
-      {props.items.map((i) => {
-        return <ItemsServicesPrice itemPrice={i.text} icon={i.icon} color={i.color}/>;
-      })}
+      <ListServices>
+        {props.items.map((i) => {
+          return (
+            <ItemsServicesPrice
+              itemPrice={i.text}
+              icon={i.icon}
+              color={i.color}
+            />
+          );
+        })}
+      </ListServices>
       <Button text="order now" />
     </StyledPricePlans>
   );
@@ -89,6 +97,8 @@ const ValuePrice = styled.h2`
   margin: 19px 0 8px;
 `;
 
-const ValueText = styled.p`
+const ValueText = styled.p``;
 
+const ListServices = styled.ul`
+  margin-top: 21px;
 `;

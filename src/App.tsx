@@ -1,4 +1,3 @@
-import './App.css';
 import { Header } from "./layout/header/Header";
 import styled from "styled-components";
 import { Flexwrapper } from "./components/Flexwrapper";
@@ -19,6 +18,7 @@ function App() {
     <div className="App">
       <MainContainer>
         <Flexwrapper gap="30px">
+          <SidebarLeft/>
             <Main>
               <Header />
               <MyServices />
@@ -41,7 +41,7 @@ function App() {
 export default App;
 
 const MainContainer = styled.div`
-  max-width: 1100px;
+  max-width: 1440px;
   margin: 0 auto;
 `;
 const Main = styled.div``;

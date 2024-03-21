@@ -12,7 +12,7 @@ export const Footer = () => {
     );
 };
 
-const StyledFooter = styled.section``;
+const StyledFooter = styled.footer``;
 const Copyright = styled.h4`
     text-align: center;
     background-color: ${theme.colors.white};

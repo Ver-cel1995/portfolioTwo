@@ -29,7 +29,7 @@ export const WrapEducations = (props: WrapEducationsPropsType) => {
     );
 };
 
-const WrapperEducations = styled.div`
+export const WrapperEducations = styled.div`
     max-width: 974px;
     position: relative;
 

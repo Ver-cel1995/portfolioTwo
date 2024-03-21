@@ -1,21 +1,26 @@
 import styled from "styled-components";
-import { Icon } from "../../../../components/Icon";
 import { theme } from "../../../../styles/Theme";
 
 type WrapInfoPropsType = {
-  country: string;
-  city: string;
-  streat: string;
-  local: string;
-  cities: string;
-  outdoors: string;
+  country?: string;
+  city?: string;
+  streat?: string;
+  local?: string;
+  cities?: string;
+  outdoors?: string;
   icon?: React.ReactNode;
 };
+
+type WrapIncoProipsType = {
+  width?: string,
+  height?: string,
+  cursor?: string
+}
 
 export const WrapInfo = (props: WrapInfoPropsType) => {
   return (
     <StyledWrapInfo>
-      <WrapIcon>{props.icon}</WrapIcon>
+      <WrapIcon width="34px" height="34px">{props.icon}</WrapIcon>
       <WrapperContacrt>
         <Country>{props.country}</Country>
         <CountryText>{props.local}</CountryText>
@@ -38,17 +43,17 @@ const StyledWrapInfo = styled.div`
   padding: 0 25px 14px;
   color: ${theme.colors.grey};
 `;
-const WrapIcon = styled.a`
+export const WrapIcon = styled.a<WrapIncoProipsType>`
   text-align: center;
   border-radius: 50%;
   background-color: ${theme.colors.yellow};
-  width: 35px;
-  height: 35px;
+  width: ${props => props.width || "34px"};
+  height: ${props => props.height || "34px"};
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 34px auto;
-  cursor: default;
+  cursor: ${props => props.cursor || "default"};
 `;
 
 const WrapperContacrt = styled.div`

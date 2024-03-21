@@ -3,7 +3,6 @@ import { Icon } from "../Icon";
 export const goldItems = [
     {
       text: "UI Design",
-      color: "#red",
       icon: (
         <Icon iconId="check" width="15px" height="15px" viewbox="0 0 20 20" />
       ),
@@ -31,23 +30,27 @@ export const goldItems = [
       icon: (
         <Icon iconId="close" width="15px" height="15px" viewbox="0 0 20 20" />
       ),
+      color: "#767676"
     },
     {
       text: "5 Websites",
       icon: (
         <Icon iconId="close" width="15px" height="15px" viewbox="0 0 20 20" />
       ),
+      color: "#767676"
     },
     {
       text: "unlimited user",
       icon: (
         <Icon iconId="close" width="15px" height="15px" viewbox="0 0 20 20" />
       ),
+      color: "#767676"
     },
     {
       text: "20 gB bandwith",
       icon: (
         <Icon iconId="close" width="15px" height="15px" viewbox="0 0 20 20" />
       ),
+      color: "#767676"
     },
   ];

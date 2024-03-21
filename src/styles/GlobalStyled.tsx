@@ -40,6 +40,8 @@ export const GlobalStyled = createGlobalStyle`
     body {
         background-color: #F0F0F6;
         font-family: 'Inter', sans-serif;
+
+        min-width: 360px;
     }
 
     section {
